@@ -1,5 +1,5 @@
 // blinking LED
-const int LED = 13;
+//const int LED = 13;
 
 void setup() {
   pinMode(LED, OUTPUT);
