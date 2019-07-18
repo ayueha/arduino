@@ -12,12 +12,13 @@ void setup(){
 }
 
 void loop(){
-  val = digitalRead(BUTTON);
+  val = digitalRead(BUTTON); //read button
 
-  if (val == HIGH and old_val==0){  
+  if ((val == HIGH) && (old_val == LOW)){  //if led is off
       state = 1-state;
-      delay (100);
+      delay (100);  //bouncing
   }
+  old_val = val;
   
   if (state == 1){
     digitalWrite(LED, HIGH);
